@@ -7,7 +7,7 @@ let pythonPackages = p: with p;
   [
     abstract-singleton
     openapi-python-client
-    auto-gpt-plugin-template
+    alpha-plugin-template
     httpcore
     httpx
     distro
@@ -57,7 +57,7 @@ let pythonPackages = p: with p;
 in
 
 mkShellNoCC {
-  pname = "auto-gpt";
+  pname = "alpha";
   version = "0.0.1"; # bogus development version
 
   buildInputs = [
@@ -65,7 +65,7 @@ mkShellNoCC {
   ];
 
   shellHook = ''
-    tput setaf 2; echo "=== Auto-GPT Flake Environment ==="; tput sgr0; echo
+    tput setaf 2; echo "=== Alpha Flake Environment ==="; tput sgr0; echo
     if ! test -e ".env"; then
       tput setaf 3; echo "ATTENTION:"; tput sgr0; tput setaf 5
       echo '- File ".env" is missing:'
