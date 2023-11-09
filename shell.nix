@@ -93,7 +93,7 @@ mkShellNoCC {
       checkKey "PINECONE_ENV"     "your-pinecone-region"  "Update \".env\" file with API Keys environment value obtained from: https://www.pinecone.io/"
       checkKey "OPENAI_API_KEY"   "your-openai-api-key"   "Update \".env\" file with OpenAI API key obtained from: https://platform.openai.com/account/api-keys"
     fi
-    tput setaf 13; echo "  - To run Auto-GPT, execute:"; echo
-    echo "    python -m autogpt"; tput sgr0; echo
+    tput setaf 13; echo "  - To run alpha, execute:"; echo
+    echo "    python -m alpha"; tput sgr0; echo
   '';
 }
